@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título del Proyecto</title>
+    <!-- Asegúrate de incluir los archivos CSS y JS de UIKit y Apache ECharts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script>
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <div id="logo">Logo</div>
+        <h1>Título del Proyecto</h1>
+        <button id="menu-hamburguesa" uk-toggle="target: #offcanvas-nav">Menú</button>
+    </header>
+
+    <!-- Offcanvas de UIKit -->
+    <div id="offcanvas-nav" uk-offcanvas="mode: push; overlay: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <!-- Aquí puedes incluir las gráficas de Apache ECharts -->
+            <div id="bar-chart" style="width: 600px;height:400px;"></div>
+            <div id="pie-chart" style="width: 600px;height:400px;"></div>
+        </div>
+    </div>
+
+    <!-- Listado de cards -->
+    <div id="cards" class="uk-child-width-1-2@m" uk-grid uk-scrollspy="cls: uk-animation-fade; target: > div > .uk-card; delay: 500; repeat: true">
+        <!-- Las cards se generarán dinámicamente con JavaScript -->
+    </div>
+
+    <!-- Paginación -->
+    <ul id="pagination" class="uk-pagination uk-flex-center" uk-margin></ul>
+
+    <!-- Aquí puedes incluir los scripts de tu proyecto -->
+    <script src="mi.js"></script>
+</body>
+</html>
